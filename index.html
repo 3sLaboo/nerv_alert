@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>NERV本部警告アラート</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/excessAlert.css" />
+    <script src="./js/excessAlert.js"></script>
+    <script>
+      window.onload = function () {
+        // excessAlert.jsを初期化
+        excessAlert_init();
+      };
+      function checkInput() {
+        let shimei = document.getElementById("shimei").value;
+        let mailAddress = document.getElementById("mail_address").value;
+        if (shimei == "") {
+          openExcessAlert("お名前を入力してください。");
+          return;
+        }
+        if (mailAddress == "") {
+          openExcessAlert("メールアドレスを入力してください。");
+          return;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cp_iptxt">
+        <label class="ef">
+          <input type="text" id="shimei" placeholder="お名前" />
+        </label>
+      </div>
+      <div class="cp_iptxt">
+        <label class="ef">
+          <input type="text" id="mail_address" placeholder="メールアドレス" />
+        </label>
+        <a href="#" class="btn-square" onclick="checkInput()">登　録</a>
+      </div>
+    </div>
+  </body>
+</html>

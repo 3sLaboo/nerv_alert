@@ -1,0 +1,265 @@
+#alert_cover {
+  background-color: #000;
+  z-index: 2147483647;
+  position: absolute;
+}
+.hexagon {
+  position: absolute;
+}
+.hexagon__alert {
+  position: absolute;
+  display: block;
+}
+.hexagon__common {
+  position: absolute;
+  width: 80px;
+}
+.hexagon__common::before {
+  display: block;
+  padding-top: 173.205080757%; /* 3 / √3 * 100 */
+  content: "";
+}
+.hexagon__alert__hexagon1 {
+  top: 65px;
+  left: 0;
+}
+.hexagon__alert__hexagon2 {
+  top: 0;
+  left: 113px;
+}
+.hexagon__alert__hexagon3 {
+  top: 130px;
+  left: 113px;
+}
+.hexagon__alert__hexagon4 {
+  top: 65px;
+  left: 227px;
+}
+.hexagon__alert__hexagon5 {
+  top: 0;
+  left: 363px;
+}
+.hexagon__alert__hexagon6 {
+  top: 130px;
+  left: 363px;
+}
+.hexagon__alert__hexagon7 {
+  top: 65px;
+  left: 477px;
+}
+.hexagon__border__common {
+  position: absolute;
+  top: 0;
+  left: 37px;
+  width: 100%;
+  height: 100%;
+}
+.hexagon__inner__common {
+  position: absolute;
+  top: 4px;
+  left: 39px;
+  width: 95%;
+  height: 95%;
+  background-color: #e71f1f;
+}
+.hexagon__inner__middle {
+  left: 0;
+  width: 217%;
+}
+
+.hexagon__rotate-1 {
+  transform: rotate(120deg);
+}
+.hexagon__rotate-2 {
+  transform: rotate(-120deg);
+}
+.hexagon__border__common::before,
+.hexagon__border__common::after {
+  position: absolute;
+  height: 2px;
+  content: "";
+  background-color: #e71f1f;
+}
+.hexagon__border__common::before {
+  top: 0;
+}
+.hexagon__border__common::after {
+  bottom: 0;
+}
+.hexagon__border::before,
+.hexagon__border::after {
+  left: 0;
+  right: 0;
+}
+.hexagon__left__border-1::before,
+.hexagon__left__border-1::after {
+  left: 0;
+  right: 3px;
+}
+.hexagon__left__border-2::after {
+  left: 0;
+  right: 0;
+}
+.hexagon__left__border-3::before {
+  left: 0;
+  right: 0;
+}
+.hexagon__right__border-1::before,
+.hexagon__right__border-1::after {
+  left: 2px;
+  right: 0;
+}
+.hexagon__right__border-2::before {
+  left: 0;
+  right: 0;
+}
+.hexagon__right__border-3::after {
+  left: 0;
+  right: 0;
+}
+.hexagon__middle__border::before,
+.hexagon__middle__border::after {
+  left: 2px;
+  right: -19px;
+}
+.hexagon__up__border-1::before {
+  left: 0;
+  right: 0;
+}
+.hexagon__up__border-2::after {
+  left: 0;
+  right: 4px;
+}
+.hexagon__up__border-3::after {
+  left: 4px;
+  right: 0;
+}
+.hexagon__down__border-1::after {
+  left: 0;
+  right: 0;
+}
+.hexagon__down__border-2::before {
+  left: 4px;
+  right: 0;
+}
+.hexagon__down__border-3::before {
+  left: 0;
+  right: 4px;
+}
+.triangle__common {
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.triangle__up {
+  border-bottom: 16px solid #000;
+}
+.triangle__down {
+  border-top: 16px solid #000;
+}
+.triangle__up__alert {
+  top: 50px;
+  left: 70px;
+}
+.triangle__down__alert {
+  top: 75px;
+  left: 70px;
+}
+.triangle__up__hexagon {
+  top: 10px;
+  left: 70px;
+}
+.triangle__down__hexagon {
+  top: 113px;
+  left: 70px;
+}
+.hexagon__alert__message {
+  position: absolute;
+  font-family: "HGS明朝E";
+  font-size: 28px;
+  top: 119px;
+  left: 110px;
+  width: 502px;
+  text-align: center;
+}
+
+.hexagon__alert__warning__common {
+  position: absolute;
+  font-family: "HGS明朝E";
+  border: 1px solid #000;
+  text-align: center;
+}
+.hexagon__inner__emergency {
+  position: absolute;
+  font-weight: bold;
+  font-family: "MV Boil";
+  font-size: 19px;
+  top: 56px;
+  left: 15px;
+}
+
+.hexagon__alert__warning__head {
+  font-size: 36px;
+  width: 85px;
+  top: 112px;
+  left: 31px;
+}
+.hexagon__alert__warning__side {
+  font-size: 27px;
+  width: 73px;
+}
+.hexagon__alert__warning__left {
+  left: 153px;
+}
+.hexagon__alert__warning__right {
+  left: 403px;
+}
+.hexagon__alert__warning__top {
+  top: 10px;
+}
+.hexagon__alert__warning__bottom {
+  top: 228px;
+}
+.pointer {
+  cursor: pointer;
+}
+
+/* 点滅 */
+.blinking {
+  -webkit-animation: blink 0.5s ease-in-out infinite alternate;
+  -moz-animation: blink 0.5s ease-in-out infinite alternate;
+  animation: blink 0.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
